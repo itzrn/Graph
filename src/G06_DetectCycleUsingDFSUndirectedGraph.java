@@ -58,6 +58,8 @@ public class G06_DetectCycleUsingDFSUndirectedGraph {
         return false;
     }
 
+    // we can not use only visited flag to know that there is nay cycle in graph or not
+
     // here we are using dfs traversal
     public boolean dfs(int start, ArrayList<ArrayList<Integer>> adj, int parent, boolean[] visited){
         visited[start] = true;
