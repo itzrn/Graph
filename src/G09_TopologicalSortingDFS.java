@@ -66,14 +66,14 @@ public class G09_TopologicalSortingDFS {
         int[] ans = new int[V];
 
         int i = 0;
-        while(!stack.isEmpty()){
+        while(!stack.isEmpty()){ // we are using stack so that we can easily put the node (the node from where we can not fo further) at the end
             ans[i] = stack.pop();
             i++;
         }
         return ans;
     }
 
-    public void dfs(int start, boolean[] visited, ArrayList<ArrayList<Integer>> adj, Stack<Integer> stack){
+    public void dfs(int start, boolean[] visited, ArrayList<ArrayList<Integer>> adj, Stack<Integer> stack){ // this is normal dfs
         visited[start] = true;
         for(int i:adj.get(start)){
             if(!visited[i]){

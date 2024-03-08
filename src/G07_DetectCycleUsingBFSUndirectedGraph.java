@@ -64,12 +64,12 @@ public class G07_DetectCycleUsingBFSUndirectedGraph {
         queue.add(new int[]{start, -1}); // putting the starting point
         visited[start] = true;
         while(!queue.isEmpty()){
-            int[] temp = queue.poll(); // taking put the front element from the queue
+            int[] temp = queue.poll(); // taking the front element from the queue
             for(int i : adj.get(temp[0])){ // iterating through every adjacent node
                 if(!visited[i]){// if it's not visited
                     visited[i] = true; // then make it visited
                     queue.add(new int[]{i, temp[0]}); // add it to queue
-                }else if(i != temp[1]){ // if its visited, and it's not the parent node then return true
+                }else if(i != temp[1]){ // if its visited, and it's not the parent node then return true -> reaching to visited node
                     return true;
                 }
             }
