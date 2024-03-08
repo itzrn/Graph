@@ -48,6 +48,10 @@ import java.util.List;
 import java.util.Queue;
 
 public class G10_TopologicalSortBFSKahnsAlgo {
+    /*
+    Topological sorting is done in Acyclic graph
+    Here the basic logic is the lowest inDegree will come first
+     */
     public int[] topoSort(int V, ArrayList<ArrayList<Integer>> adj) {
         int[] inDegree = new int[V];
 
